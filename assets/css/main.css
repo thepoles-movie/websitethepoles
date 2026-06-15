@@ -3998,15 +3998,23 @@ input, select, textarea {
 		background-color: #1d242a;
 	}
 
+/* Centers the container and limits its maximum width on desktop */
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px; /* Adjust this to change the maximum size on desktop */
+  margin: 0 auto;   /* Centers the container horizontally */
+  text-align: center; 
 }
 
-.video-container iframe {
+/* Creates a responsive container for the video */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintains standard widescreen format */
+}
+
+/* Forces the video to fill the responsive wrapper */
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
